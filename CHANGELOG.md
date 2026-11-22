@@ -1,3 +1,7 @@
+# v0.3.1 — November 22, 2026
+
+The app carries the product name: the sidebar reads "CF Network Dashboard" with the CF emblem (it follows the accent colour), the tab title is "CF Network Dashboard" with the emblem as its icon, and the demo router is "OpenWrt router". The launcher recognises both the new and the old title. The README notes that the names and the emblem are not covered by the MIT license.
+
 # v0.3.0 — November 22, 2026 (first public release)
 
 Core colours are now CSS custom properties (`--cf-*`) in one token block, with no visible change: every colour stays within ΔE 3.5 of before. A test keeps literal colours out of the stylesheets and components. Add-ons can set `client = "file.js"` to have the dashboard import one script from their own folder; `/api/addons` lists it as `client`. Together these let an add-on recolour the dashboard (docs/THEME-SEAM.md, docs/ADDON-DESIGN.md). The free dashboard keeps its single dark look.

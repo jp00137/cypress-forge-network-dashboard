@@ -212,7 +212,7 @@ def parse(raw, host, now=None):
 
 
 def sample():
-    return dict(timestamp=time.time(), mode='demo', router=dict(name='Cypress MX64', model='Cisco Meraki MX64 · OpenWrt',
+    return dict(timestamp=time.time(), mode='demo', router=dict(name='OpenWrt router', model='Cisco Meraki MX64 · OpenWrt',
         ip='192.168.1.1', release='Sample only', uptime=183462, load=0.18, memory=34.2),
         interfaces=[dict(name='wan', device='eth0', up=True, addresses=['192.0.2.2'], counters={}),
                     dict(name='lan', device='br-lan', up=True, addresses=['192.168.1.1'], counters={})],
