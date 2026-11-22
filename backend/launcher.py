@@ -26,7 +26,7 @@ def listener_status():
             page = response.read(16384).decode('utf-8')
         if (health.get('service') == 'ok' and health.get('mode') in ('live', 'demo')
                 and isinstance(health.get('verified'), bool)
-                and '<title>Cypress Forge' in page):
+                and ('<title>CF Network Dashboard' in page or '<title>Cypress Forge' in page)):
             return 'running'
     except (OSError, ValueError, AttributeError, UnicodeError):
         pass
@@ -38,11 +38,11 @@ def main():
     if status == 'free':
         return 0
     if status == 'running':
-        print('Cypress Forge is already running: ' + URL)
+        print('CF Network Dashboard is already running: ' + URL)
         print('Use its original server window to stop or restart it. Router verification is shown in the dashboard.')
         return 10
     print('Port 8765 is occupied or could not be checked. No process was stopped.')
-    print('Check the existing application before starting Cypress Forge again.')
+    print('Check the existing application before starting CF Network Dashboard again.')
     return 20
 
 

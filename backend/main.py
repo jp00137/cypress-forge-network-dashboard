@@ -131,7 +131,7 @@ def create_app(config=None, store=None, collector=collect, firewall_collector=co
             with contextlib.suppress(asyncio.CancelledError):
                 await dhcp_task
 
-    app = FastAPI(title='Cypress Forge', docs_url=None, redoc_url=None,
+    app = FastAPI(title='CF Network Dashboard', docs_url=None, redoc_url=None,
                   openapi_url=None, lifespan=lifespan)
     app.add_middleware(TrustedHostMiddleware, allowed_hosts=['127.0.0.1', 'localhost', '[::1]'])
 

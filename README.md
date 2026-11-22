@@ -129,3 +129,7 @@ router gate need a POSIX `sh`, so they error there; run them on Linux or WSL.
 ## License
 
 MIT, see [LICENSE](LICENSE). Dependencies keep their own licenses.
+
+The MIT license covers the code. It does not grant rights to the names "CF Network Dashboard", "CF Dashboard Plus" and
+"Cypress Forge", or to the CF emblem (`frontend/src/CfEmblem.tsx` and the tab icon). Forks should use their own name
+and icon.

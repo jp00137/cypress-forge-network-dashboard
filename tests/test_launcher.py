@@ -23,6 +23,11 @@ class LauncherTests(unittest.TestCase):
     def test_app_identification_does_not_require_live_router(self):
         self.assertEqual(self.check_listener(b'{"service":"ok","mode":"live","verified":false}', b'<title>Cypress Forge Observatory</title>'), 'running')
 
+    def test_new_and_old_titles_are_both_recognised(self):
+        health = b'{"service":"ok","mode":"demo","verified":false}'
+        self.assertEqual(self.check_listener(health, b'<title>CF Network Dashboard</title>'), 'running')
+        self.assertEqual(self.check_listener(health, b'<title>Cypress Forge \xc2\xb7 Network Observatory</title>'), 'running')
+
     def test_unrelated_service_is_not_reopened(self):
         self.assertEqual(self.check_listener(b'{"service":"ok","mode":"live","verified":true}', b'<title>Another app</title>'), 'occupied')
         self.assertEqual(self.check_listener(b'not json', b'<title>Cypress Forge</title>'), 'occupied')
