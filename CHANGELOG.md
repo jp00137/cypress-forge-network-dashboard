@@ -1,3 +1,7 @@
+# v0.4.0 — November 22, 2026
+
+Linux support (tested on Debian 13). New shell scripts mirror the PowerShell ones: `scripts/setup.sh`, `start.sh`, `test.sh` and `connect-router.sh` (the same guided, read-only router connection). The optional `install-service.sh` and `uninstall-service.sh` run the dashboard as a systemd user service. A GitHub Actions workflow runs every test on Linux, router-gate tests included. Node.js 20.19+ is now accepted (Vite 7 needs 20.19+ or 22.12+). Shell scripts are kept with LF line endings by `.gitattributes`. See docs/LINUX-SUPPORT.md.
+
 # v0.3.3 — November 22, 2026
 
 The page subtitle reads "CF Network Dashboard / Home network" instead of "Cypress Forge / Home network". The README shows screenshots (demo data), and new issues get a short template asking for router model, OpenWrt version and app version.
