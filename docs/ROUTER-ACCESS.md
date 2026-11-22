@@ -1,10 +1,19 @@
 # Connecting the dashboard to an OpenWrt router
 
-One command, run once from the project folder in PowerShell:
+One command, run once from the project folder. In PowerShell on Windows:
 
 ```powershell
 .\scripts\connect-router.ps1
 ```
+
+or in a terminal on Linux:
+
+```sh
+./scripts/connect-router.sh
+```
+
+On Linux the key is created in `~/.ssh/cypress_forge_collector` instead of `%USERPROFILE%\.ssh\`. Each computer gets
+its own collector key: connecting a second computer adds a second entry and leaves the first one working.
 
 It walks through five steps:
 

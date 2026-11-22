@@ -37,9 +37,9 @@ Demo mode shows sample data so you can look around before connecting a router.
 
 ## Requirements
 - An OpenWrt router you can log in to over SSH (tested on OpenWrt 25.12 on a Meraki MX64).
-- Windows 10 or 11 with PowerShell. The setup and start scripts are PowerShell. The backend is plain Python, but only
-  Windows is tested so far.
-- Python 3.11+, Node 22.12+ with npm (to build the frontend once), and the Windows OpenSSH client.
+- Windows 10 or 11 with PowerShell, or Linux (tested on Debian 13).
+- Python 3.11+, Node.js 20.19+ or 22.12+ with npm (to build the frontend once), and an OpenSSH client (built into
+  Windows 10/11; `openssh-client` on Linux).
 
 ## Install and run
 
@@ -59,6 +59,23 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 cd frontend; npm ci; npm run build; cd ..
 .\.venv\Scripts\python.exe -m uvicorn backend.main:app --host 127.0.0.1 --port 8765 --no-proxy-headers
+```
+
+### On Linux
+
+```sh
+./scripts/setup.sh                # checks Python/Node, creates .venv, builds the frontend
+./scripts/start.sh                # serves http://127.0.0.1:8765 until Ctrl+C (demo mode at first)
+./scripts/connect-router.sh       # the same guided router connection as below
+```
+
+`setup.sh` never runs `sudo`: if Python's `venv` module or Node.js is missing, it prints the `apt`/`dnf` command to
+install it. On Debian 13, `sudo apt install python3-venv nodejs npm` is enough.
+
+To keep it running in the background (at login, or at boot with linger) instead of in a terminal:
+
+```sh
+./scripts/install-service.sh      # systemd user service; ./scripts/uninstall-service.sh removes it
 ```
 
 ## Connect your router
@@ -120,6 +137,8 @@ email or desktop, and accent colours.
 ```powershell
 .\scripts\test.ps1
 ```
+
+On Linux: `./scripts/test.sh`. Every pull request also runs the tests on Linux (GitHub Actions).
 
 This runs the backend tests (`python -m unittest discover -s tests`) and the frontend tests and build
 (`cd frontend; npm test; npm run build`). On native Windows, the `test_router_access` tests that run the generated

@@ -1,3 +1,4 @@
 # GitHub Actions
 
-No CI workflow is configured. Add one once executable code and tests exist.
+`test.yml` runs `scripts/test.sh` (backend tests, frontend tests and build) on Linux for every pull request and every
+push to main.
