@@ -84,9 +84,8 @@ break them), and are checked with `shellcheck` where available.
 4. **Syntax:** all six scripts pass `sh -n` and `dash -n`. `shellcheck` isn't installed on the test machine.
 
 ## Out of scope
-- **CF Dashboard Plus on Linux:** its `install.sh` and a Linux toast channel are a separate add-on change after this.
-  The add-on code already runs on Linux; only its installer and the Windows-only desktop notification would need
-  work.
+- **CF Dashboard Plus on Linux:** done separately in the add-on. Plus 0.5.0 ships `install.sh` and Linux desktop
+  notifications through `notify-send`, and was tested on Debian 13 against this core running as the user service.
 - **macOS:** likely works with the same scripts, but untested, so it's not claimed.
 - Packages (`.deb`) and Docker images.
 
