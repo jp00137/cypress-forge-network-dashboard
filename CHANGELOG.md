@@ -1,3 +1,7 @@
+# v0.3.2 — November 22, 2026
+
+The sidebar footer reads "CF NETWORK DASHBOARD" with the app version, now taken from `frontend/package.json` (0.3.2) instead of a hard-coded "v0.2".
+
 # v0.3.1 — November 22, 2026
 
 The app carries the product name: the sidebar reads "CF Network Dashboard" with the CF emblem (it follows the accent colour), the tab title is "CF Network Dashboard" with the emblem as its icon, and the demo router is "OpenWrt router". The launcher recognises both the new and the old title. The README notes that the names and the emblem are not covered by the MIT license.
