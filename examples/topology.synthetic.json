@@ -1,0 +1,12 @@
+{
+  "site": "Demo Lab (synthetic)",
+  "devices": [
+    {"id":"gateway","name":"ISP Gateway","kind":"gateway","vendor":"Example"},
+    {"id":"router","name":"Router","kind":"router","vendor":"OpenWrt"},
+    {"id":"ap","name":"Access Point","kind":"access_point","vendor":"Example"}
+  ],
+  "links": [
+    {"source":"gateway","target":"router","provenance":"manual"},
+    {"source":"router","target":"ap","provenance":"inferred"}
+  ]
+}

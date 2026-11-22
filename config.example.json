@@ -1,0 +1,13 @@
+{
+  "mode": "demo",
+  "host": "192.168.1.1",
+  "username": "root",
+  "identity_file": "",
+  "poll_seconds": 60,
+  "retention_days": 7,
+  "collect_ports": false,
+  "collect_firewall": false,
+  "firewall_seconds": 300,
+  "collect_dhcp": false,
+  "dhcp_seconds": 300
+}

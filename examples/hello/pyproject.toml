@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cf-hello"
+version = "0.1.0"
+description = "Example Cypress Forge add-on: proves the add-on seam (routes, UI, on_event, on_snapshot)."
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = []  # fastapi comes from the Cypress Forge venv it installs into
+
+[project.entry-points."cypressforge.addons"]
+hello = "cf_hello:Hello"
+
+[tool.setuptools]
+packages = ["cf_hello"]
+
+[tool.setuptools.package-data]
+cf_hello = ["ui/*"]

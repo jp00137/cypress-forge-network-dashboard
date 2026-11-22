@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+# Node
+node_modules/
+dist/
+build/
+.next/
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+*.p12
+*.pfx
+credentials*.json
+secrets*.json
+# Databases, logs, inventories, exports
+*.db
+*.sqlite
+*.sqlite3
+*.db-*
+*.log
+logs/
+data/
+backups/
+exports/
+reports/
+inventory*.json
+inventory*.csv
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+# Cypress Forge app (local-only)
+config.local.json
+imports/
+*.tsbuildinfo
+frontend/.test-build/
