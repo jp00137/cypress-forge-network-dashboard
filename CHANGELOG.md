@@ -1,3 +1,7 @@
+# v0.3.3 — November 22, 2026
+
+The page subtitle reads "CF Network Dashboard / Home network" instead of "Cypress Forge / Home network". The README shows screenshots (demo data), and new issues get a short template asking for router model, OpenWrt version and app version.
+
 # v0.3.2 — November 22, 2026
 
 The sidebar footer reads "CF NETWORK DASHBOARD" with the app version, now taken from `frontend/package.json` (0.3.2) instead of a hard-coded "v0.2".

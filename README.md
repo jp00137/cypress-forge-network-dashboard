@@ -6,7 +6,13 @@ computer: no account, no cloud service, no telemetry. It never changes your rout
 
 MIT-licensed. Made by [Cypress Forge](https://cypressforge.dev).
 
-<!-- Screenshot: demo mode Overview -->
+![Overview in demo mode: router, internet provider and access points, live client and WAN figures](docs/images/overview.png)
+
+| Device inventory | Ports |
+| --- | --- |
+| ![Device inventory with names, addresses and evidence](docs/images/inventory.png) | ![Rear-panel port schematic with per-port labels](docs/images/ports.png) |
+
+Screenshots use the built-in demo data; nothing here is a real network.
 
 ## What it shows
 - **Overview and topology:** router, internet provider and access points, with evidence labels that say what was
